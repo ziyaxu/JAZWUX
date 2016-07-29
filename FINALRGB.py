@@ -14,22 +14,30 @@ img = img.resize((width, height), Image.ANTIALIAS)
 
 #storing as colors
 #need to do this
-rgb = np.array(img)
+rgb = img.load() #array to change pixel values
+arr = np.array(img)
 for x in range(0,width-1):
     for y in range(0,height-1):
-        pix = rgb[x][y]
-        if pix[0] > pix[1] && pix[0] > pix[2]:
-            rgb[x][y] = 'r'
-        elif pix[1] > pix[0] && pix[1] > pix[2]:
-            rgb
-        else
+        pix = arr[x][y]
+        if pix[0] > pix[1] & pix[0] > pix[2] & pix[0] > 175:
+            rgb[x,y] = (255,0,0)
+            print('red')
+        elif pix[1] > pix[0] & pix[1] > pix[2] & pix[1] > 175:
+            rgb[x,y] = (0,255,0)
+            print('green')
+        elif pix[2] > pix[0] & pix[2] > pix[1] & pix[2] > 175:
+            rgb[x,y] = (0,0,255)
+            print('blue')
+        else:
+            rgb[x,y] = (255,255,255)
+            print('white')
 
 #saving
 img.save('RGBResized.jpeg')
 
 # Write the image to arrays, using numpy
 #change this
-arr = 
+arr = np.array(img)
 
 # Example of finding a specific pixel and printing it
 #print(arr[0, 5])
