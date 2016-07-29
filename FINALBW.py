@@ -5,7 +5,7 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('BeachBall.png')
+img = Image.open('Panda.png')
 
 #resize image
 width = 64
@@ -16,7 +16,7 @@ img = img.resize((width, height), Image.ANTIALIAS)
 img = img.convert('1')
 
 #saving
-img.save('BWResized.jpeg')
+img.save('BWResized.png')
 
 # Write the image to an array, using numpy
 arr = np.array(img)
