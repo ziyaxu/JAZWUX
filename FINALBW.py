@@ -5,10 +5,17 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('SmallEye.jpeg')
+img = Image.open('BeachBall.png')
+
+#resize image
+width = 64
+height = 64
+img = img.resize((width, height), Image.ANTIALIAS)
 
 #black and white
 img = img.convert('1')
+
+#saving
 img.save('BWResized.jpeg')
 
 # Write the image to an array, using numpy
@@ -18,12 +25,10 @@ arr = np.array(img)
 #print(arr[0, 5])
 
 # Printing the entire array
-
 #for x in arr:
 #    print (x)
 
 # Write array to a file
-
 b = arr.tolist() # nested lists with same data, indices
 
 build = {}
