@@ -5,7 +5,7 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('BeachBall.png')
+img = Image.open('RGB.png')
 
 #resize image
 width = 64
@@ -60,7 +60,7 @@ for x in range(0,width):
         rgb[x,y] = temp
 
 #saving
-img.save('RGBResized.jpeg')
+img.save('RGBResized.png')
 
 # Write the image to arrays, using numpy
 #change this
