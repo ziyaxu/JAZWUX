@@ -6,11 +6,17 @@ JSONObject json;
 
 void setup() {
 
-  arduino = new Arduino(this, Arduino.list()[0], 57600); //change 0 to serial port used by Arduino
+  //arduino = new Arduino(this, Arduino.list()[0], 57600); //change 0 to serial port used by Arduino
   
-  println(Arduino.list()); //use this to find the serial port Arduino uses?
+  //println(Arduino.list()); //use this to find the serial port Arduino uses?
   
   json = loadJSONObject("FINAL.json");
   
+  JSONArray image = json.getJSONArray("image");
+  
+  // Get the first item in the JSON array
+  //JSONObject firstpix = image.getJSONObject(0);
+  
+  System.out.println(image.getJSONArray(1));
   
 }
