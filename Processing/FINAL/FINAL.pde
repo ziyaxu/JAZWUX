@@ -20,11 +20,21 @@ void setup() {
     for (y = 0; y < 64; y++) {
       i = image.getJSONArray(x).getJSONArray(y).getInt(0);
       if (i == 1) {
-      } else if (i == 
+      } else if (i == 2) {
+      } else if (i == 3) {
+      } else if (i == 4) {
+      } else if (i == 5) {
+      } else if (i == 6) {
+      } else if (i == 7) {
+      } else {
+      }
     }
   }
   
-  //System.out.println(image.getJSONArray(1).getJSONArray(0).getInt(0));
-  int i=image.getJSONArray(0).getJSONArray(0).getInt(0);
-  System.out.println(i);
+}
+
+void nextRow() {
+}
+
+void pixel() {
 }
