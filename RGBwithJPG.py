@@ -5,7 +5,7 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('obama-hope-large.png')
+img = Image.open('Obama3.jpg')
 
 #resize image
 width = 100
@@ -20,37 +20,33 @@ for x in range(0,width):
     for y in range(0,height):
         pix = arr[x,y]
         if (pix[0] > pix[2]) & (pix[1] > pix[2]) & (pix[2] < 50) & ((pix[1] >= (pix[0] - 50)) | (pix[1] >= (50 + pix[0]))):
-            #print(pix)
-            rgb[x,y] = (255,255,0,255)
-            arr[x,y] = 1
-           # print('yellow')
+           #print(pix)
+           rgb[x,y] = (255,255,0,255)
+           arr[x,y] = 1
+           #print('yellow')
         elif (pix[2] > pix[0]) & (pix[2] > pix[1]) & (pix[2] > 50):
-            #print(pix)
-            rgb[x,y] = (0,0,255,255)
-            arr[x,y] = 2
-            #print('blue')
+           #print(pix)
+           rgb[x,y] = (0,0,255,255)
+           arr[x,y] = 2
+           #print('blue')
         elif (pix[0] > pix[1]) & (pix[0] > pix[2]) & (pix[0] > 50):
-            #print(pix)
-            rgb[x,y] = (255,0,0,255)
-            arr[x,y] = 3
-            #print('red')
+           #print(pix)
+           rgb[x,y] = (255,0,0,255)
+           arr[x,y] = 3
+           #print('red')
         elif (pix[1] > pix[0]) & (pix[1] > pix[2]) & (pix[1] > 50):
-            print(pix)
-            rgb[x,y] = (0,255,0,255)
-            arr[x,y] = 4
-            #print('green')
-        elif (pix[3] == 0):
-            rgb[x,y] = (255,255,255,255)
-            arr[x,y] = 5
-            #print('white')
-        elif ((pix[0] >= (pix[1] - 50)) | (pix[0] >= (pix[1] + 50))& (pix[1] >= (pix[2] - 50)) | (pix[1] >= (pix[2] + 50))& (pix[0] <= 20)& (pix[1] <= 20)& (pix[2] <= 20)):
-            rgb[x,y] = (0,0,0,255)
-            arr[x,y] = 6
-            #print('black')
+           #print(pix)
+           rgb[x,y] = (0,255,0,255)
+           arr[x,y] = 4
+           #print('green')
+        elif (pix[0] == pix[1]) & (pix[1] == pix[2]) & (pix[1] <= 150):
+           rgb[x,y] = (0,0,0,255)
+           arr[x,y] = 6
+           #print('black')
         else:
-            rgb[x,y] = (255,255,255,255)
-            arr[x,y] = 7
-            #print('white')
+           rgb[x,y] = (255,255,255,255)
+           arr[x,y] = 7
+           #print('white')
 
 #flipping image
 for x in range(0,width):
