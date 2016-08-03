@@ -9,8 +9,8 @@ import codecs, json
 img = Image.open('Obama2.png')
 
 #resize image
-width = 100
-height = 100
+width = 10
+height = 10
 img = img.resize((width, height), Image.ANTIALIAS)
 
 #storing as colors
