@@ -23,22 +23,22 @@ for x in range(0,width):
             print(pix)
             rgb[x,y] = (255,255,0,255)
             arr[x,y] = 1
-            print('yellow')
+            #print('yellow')
         elif (pix[2] > pix[0]) & (pix[2] > pix[1]) & (pix[2] > 50):
             print(pix)
             rgb[x,y] = (0,0,255,255)
             arr[x,y] = 2
-            print('blue')
+            #print('blue')
         elif (pix[0] > pix[1]) & (pix[0] > pix[2]) & (pix[0] > 50):
             print(pix)
             rgb[x,y] = (255,0,0,255)
             arr[x,y] = 3
-            print('red')
+            #print('red')
         elif (pix[1] > pix[0]) & (pix[1] > pix[2]) & (pix[1] > 50):
             print(pix)
             rgb[x,y] = (0,255,0,255)
             arr[x,y] = 4
-            print('green')
+            #print('green')
         elif (pix[3] == 0):
             rgb[x,y] = (255,255,255,255)
             arr[x,y] = 5
