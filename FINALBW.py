@@ -8,8 +8,8 @@ import codecs, json
 img = Image.open('Panda.png')
 
 #resize image
-width = 64
-height = 64
+width = 72
+height = 72
 img = img.resize((width, height), Image.ANTIALIAS)
 
 #black and white

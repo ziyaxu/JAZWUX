@@ -23,8 +23,8 @@ void setup() {
   //Alternatively (and actually an even better solution) would be to get the length and width of the 2d part of the array from the JSON file itself, though that would take a bit of research to figure out how to do
   //I don't think the usual method of arrayName.length() will work because these aren't regular arrays, they're JSON Arrays
   
-  for (x = 0; x < 72; x++) {
-    for (y = 0; y < 64; y++) {
+  for (x = 0; x < 100; x++) {
+    for (y = 0; y < 100; y++) {
       i = image.getJSONArray(x).getJSONArray(y).getInt(0);
       if (i == 1) {
       } else if (i == 2) {

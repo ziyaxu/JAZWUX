@@ -5,11 +5,11 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('Panda.png')
+img = Image.open('BeachBall.png')
 
 #resize image
-width = 64
-height = 64
+width = 100
+height = 100
 img = img.resize((width, height), Image.ANTIALIAS)
 
 #storing as colors
@@ -19,23 +19,23 @@ rgb = img.load() #array to change pixel values
 for x in range(0,width):
     for y in range(0,height):
         pix = arr[x,y]
-        if (pix[0] > pix[2]) & (pix[1] > pix[2]) & (pix[2] < 50):
-            print(pix)
+        if (pix[0] > pix[2]) & (pix[1] > pix[2]) & (pix[2] < 50) '''& ((pix[1] >= (pix[0] - 50)) | (pix[1] >= (50 + pix[0])))''':
+            #print(pix)
             rgb[x,y] = (255,255,0,255)
             arr[x,y] = 1
             #print('yellow')
         elif (pix[2] > pix[0]) & (pix[2] > pix[1]) & (pix[2] > 50):
-            print(pix)
+            #print(pix)
             rgb[x,y] = (0,0,255,255)
             arr[x,y] = 2
             #print('blue')
         elif (pix[0] > pix[1]) & (pix[0] > pix[2]) & (pix[0] > 50):
-            print(pix)
+            #print(pix)
             rgb[x,y] = (255,0,0,255)
             arr[x,y] = 3
             #print('red')
         elif (pix[1] > pix[0]) & (pix[1] > pix[2]) & (pix[1] > 50):
-            print(pix)
+            #print(pix)
             rgb[x,y] = (0,255,0,255)
             arr[x,y] = 4
             #print('green')

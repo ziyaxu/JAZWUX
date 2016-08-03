@@ -21,17 +21,6 @@ void setup() {
 
 void move (int speed, int turns){
   
-  /*for (int j = 0; j < turns; j = j+1) {
-    arduino.digitalWrite(XSTEP, arduino.HIGH);
-    arduino.digitalWrite(YSTEP, arduino.HIGH);
-    arduino.digitalWrite(ZSTEP, arduino.HIGH);
-    delay(speed);
-    arduino.digitalWrite(XSTEP, arduino.LOW);
-    arduino.digitalWrite(YSTEP, arduino.LOW);
-    arduino.digitalWrite(ZSTEP, arduino.LOW);
-    delay(speed);
-  }*/
-  
   for (int j = 0; j < turns; j = j+1) {
     arduino.digitalWrite(XSTEP, arduino.HIGH);
     arduino.digitalWrite(YSTEP, arduino.HIGH);
