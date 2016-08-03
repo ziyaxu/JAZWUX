@@ -5,7 +5,7 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('BeachBall.png')
+img = Image.open('Obama.png')
 
 #resize image
 width = 100
