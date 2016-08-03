@@ -5,11 +5,11 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('Obama3.jpg')
+img = Image.open('Wonho.jpg')
 
 #resize image
-width = 100
-height = 100
+width = 10
+height = 10
 img = img.resize((width, height), Image.ANTIALIAS)
 
 #storing as colors
@@ -39,6 +39,10 @@ for x in range(0,width):
            rgb[x,y] = (0,255,0,255)
            arr[x,y] = 4
            #print('green')
+        #elif (pix[3] == 0):
+           #rgb[x,y] = (255,255,255,255)
+           #arr[x,y] = 5
+           #print('white')
         elif (pix[0] == pix[1]) & (pix[1] == pix[2]) & (pix[1] <= 150):
            rgb[x,y] = (0,0,0,255)
            arr[x,y] = 6
