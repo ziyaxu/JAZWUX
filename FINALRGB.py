@@ -43,7 +43,7 @@ for x in range(0,width):
             rgb[x,y] = (255,255,255,255)
             arr[x,y] = 5
             #print('white')
-        elif ((pix[0] >= (pix[1] + 50)) | (pix[0] >= (pix[1] + 50)))& (pix[1] == pix[2]) & (pix[1] <= 150):
+        elif (pix[0] == pix[1]) & (pix[1] == pix[2]) & (pix[1] <= 150):
             rgb[x,y] = (0,0,0,255)
             arr[x,y] = 6
             #print('black')
