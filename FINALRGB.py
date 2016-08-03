@@ -5,7 +5,7 @@ from PIL import Image
 import codecs, json
 
 # Open the image
-img = Image.open('Obama.png')
+img = Image.open('obama-hope-large.png')
 
 #resize image
 width = 100
@@ -20,10 +20,10 @@ for x in range(0,width):
     for y in range(0,height):
         pix = arr[x,y]
         if (pix[0] > pix[2]) & (pix[1] > pix[2]) & (pix[2] < 50) & ((pix[1] >= (pix[0] - 50)) | (pix[1] >= (50 + pix[0]))):
-            #print(pix)
+            print(pix)
             rgb[x,y] = (255,255,0,255)
             arr[x,y] = 1
-            #print('yellow')
+            print('yellow')
         elif (pix[2] > pix[0]) & (pix[2] > pix[1]) & (pix[2] > 50):
             #print(pix)
             rgb[x,y] = (0,0,255,255)
