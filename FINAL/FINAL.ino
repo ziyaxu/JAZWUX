@@ -37,6 +37,7 @@ void loop() {
   for (x = 0; x < wid; x++) {
     for (y = 0; y < hei; y++) {
       i = arr[wid][hei][0];
+      
       if (i == 1) {
         
       } else if (i == 2) {
@@ -53,7 +54,7 @@ void loop() {
         
       }
     }
-    nextRow(1)
+    nextRow(1);
   }
   
 }
