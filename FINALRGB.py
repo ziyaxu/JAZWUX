@@ -20,10 +20,10 @@ for x in range(0,width):
     for y in range(0,height):
         pix = arr[x,y]
         if (pix[0] > pix[2]) & (pix[1] > pix[2]) & (pix[2] < 50) & ((pix[1] >= (pix[0] - 50)) | (pix[1] >= (50 + pix[0]))):
-            print(pix)
+            #print(pix)
             rgb[x,y] = (255,255,0,255)
             arr[x,y] = 1
-            print('yellow')
+           # print('yellow')
         elif (pix[2] > pix[0]) & (pix[2] > pix[1]) & (pix[2] > 50):
             #print(pix)
             rgb[x,y] = (0,0,255,255)
@@ -35,7 +35,7 @@ for x in range(0,width):
             arr[x,y] = 3
             #print('red')
         elif (pix[1] > pix[0]) & (pix[1] > pix[2]) & (pix[1] > 50):
-            #print(pix)
+            print(pix)
             rgb[x,y] = (0,255,0,255)
             arr[x,y] = 4
             #print('green')
@@ -43,7 +43,7 @@ for x in range(0,width):
             rgb[x,y] = (255,255,255,255)
             arr[x,y] = 5
             #print('white')
-        elif ((pix[0] >= (pix[1] + 50)) | (pix[0] >= (pix[1] + 50)))& (pix[1] == pix[2]) & (pix[1] <= 150):
+        elif ((pix[0] >= (pix[1] - 50)) | (pix[0] >= (pix[1] + 50))& (pix[1] >= (pix[2] - 50)) | (pix[1] >= (pix[2] + 50))& (pix[0] <= 20)& (pix[1] <= 20)& (pix[2] <= 20)):
             rgb[x,y] = (0,0,0,255)
             arr[x,y] = 6
             #print('black')
